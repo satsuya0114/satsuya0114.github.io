@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kaya Liu · Resume</title>
+<meta name="description" content="Staff Engineer with 10 years of full-stack and frontend experience, starting with smart-manufacturing systems at Wistron. At Trend Micro, led AI Companion, the LLM assistant on the Vision One security platform, from first prototype to global launch with a squad of 7–8 engineers. Since 2026 also owns a production release pipeline and is deliberately growing toward backend and operations, including a PostgreSQL side project. Uses Claude Code and Cursor daily.">
+<meta name="author" content="Kaya Liu">
+<link rel="canonical" href="https://satsuya0114.github.io/">
+<meta property="og:title" content="Kaya Liu · Staff Engineer">
+<meta property="og:description" content="Staff Engineer · Full-Stack Web, LLM Applications &amp; Release Pipelines">
+<meta property="og:url" content="https://satsuya0114.github.io/">
+<meta property="og:type" content="profile">
+<style>
+:root { --bg:#fbfaf7; --surface:#ffffff; --text:#1d1d1f; --muted:#5b5b60; --accent:#1f4e79; --rule:#dedbd3; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#141518; --surface:#1c1d21; --text:#ececee; --muted:#a3a3ab; --accent:#8fb8e3; --rule:#2e3036; }
+}
+:root[data-theme="dark"] { --bg:#141518; --surface:#1c1d21; --text:#ececee; --muted:#a3a3ab; --accent:#8fb8e3; --rule:#2e3036; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--text);
+       font: 16px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+main { max-width: 780px; margin: 0 auto; padding: 48px 16px 64px; }
+header h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; letter-spacing: -0.01em; }
+.headline { color: var(--muted); margin: 0 0 16px; }
+.links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0; padding: 0; list-style: none; font-size: 0.95rem; }
+.links a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+.links a:hover, .links a:focus-visible { border-bottom-color: currentColor; }
+.links .pdf { font-weight: 600; }
+section { margin-top: 40px; }
+h2 { font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+     margin: 0 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--rule); }
+.summary { margin: 0; }
+dl.skills { display: grid; grid-template-columns: 11rem 1fr; gap: 6px 16px; margin: 0; }
+dl.skills dt { font-weight: 600; }
+dl.skills dd { margin: 0; color: var(--muted); }
+.job { margin-bottom: 28px; }
+.job-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 12px; align-items: baseline; }
+.job-head h3 { font-size: 1.05rem; margin: 0; }
+.job-head .meta { color: var(--muted); font-size: 0.9rem; }
+.role { margin: 2px 0 8px; font-weight: 500; }
+ul { margin: 0; padding-left: 1.1rem; }
+li { margin: 0 0 8px; }
+footer { margin-top: 48px; color: var(--muted); font-size: 0.85rem; }
+@media (max-width: 560px) {
+  main { padding-top: 32px; }
+  header h1 { font-size: 1.6rem; }
+  dl.skills { grid-template-columns: 1fr; gap: 0; }
+  dl.skills dd { margin-bottom: 10px; }
+}
+@media print {
+  :root { --bg:#fff; --surface:#fff; --text:#000; --muted:#333; --accent:#1f4e79; --rule:#999; }
+  main { padding: 0; max-width: none; }
+  .links .pdf, footer { display: none; }
+  section { margin-top: 20px; break-inside: avoid-page; }
+}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Kaya Liu</h1>
+<p class="headline">Staff Engineer · Full-Stack Web, LLM Applications &amp; Release Pipelines</p>
+<ul class="links">
+<li><a class="pdf" href="Kaya_Liu_Resume.pdf" download>Download PDF</a></li>
+<li><a href="mailto:satsuya0114@gmail.com">satsuya0114@gmail.com</a></li>
+
+<li>Taoyuan, Taiwan</li>
+</ul>
+</header>
+<section aria-labelledby="summary"><h2 id="summary">Summary</h2><p class="summary">Staff Engineer with 10 years of full-stack and frontend experience, starting with smart-manufacturing systems at Wistron. At Trend Micro, led AI Companion, the LLM assistant on the Vision One security platform, from first prototype to global launch with a squad of 7–8 engineers. Since 2026 also owns a production release pipeline and is deliberately growing toward backend and operations, including a PostgreSQL side project. Uses Claude Code and Cursor daily.</p></section>
+<section aria-labelledby="experience"><h2 id="experience">Experience</h2>
+<div class="job"><div class="job-head"><h3>Trend Micro Incorporated</h3><span class="meta">Taipei, Taiwan · Mar 2021 – Present</span></div>
+<p class="role">Staff Engineer (Mar 2024 – Present) · Senior Frontend Engineer (Mar 2021 – Feb 2024)</p><ul><li>Took AI Companion from prototype to GA in 6 regions as frontend architecture owner and squad lead of 7–8, releasing region by region (US first, the rest about three weeks later) and owning planning, architecture review and code review.</li><li>Cut the wait for the first visible AI reply from about 30 seconds to 2–3 seconds by moving chat streaming from WebSocket to fetch + ReadableStream on AG-UI Protocol together with the backend team, reusing existing HTTP auth and proxy infrastructure.</li><li>Let ~10 Vision One applications share one AI assistant through a single embeddable layer (Web Components, Shadow DOM) whose lifecycle follows the logged-in session, so one release reaches every application without each team rewriting its own code.</li><li>Kept agent tool calls consistent across frontend releases, saved conversation history and the model, by designing a tool runtime contract: tool specs packaged into a JSON manifest the model reads at runtime, static and dynamic registration, per-permission specs, and a version check.</li><li>Kept users&#x27; conversations intact under switching and failure: 10 concurrent sessions keep their streams and state, and a failed first run now keeps the conversation with a working Retry instead of silently discarding it.</li><li>Gave PR reviewers before/after visual diffs, videos and an AI-written advisory summary without checking out branches, now piloted in my team on 5–8 PRs a week, by building an AI PR evidence flow for the shared XDR frontend engineering pool in GitHub Actions across 3 repositories: Playwright renders base and PR builds, an AI step selects the affected visual specs, and a repository allowlist caps scope and cost.</li><li>Delivered 4 features for the MITRE 2026 exercise within one quarter, in a codebase I had joined the quarter before: aggregated attack event links, one-click investigation reports, a default AI verdict filter, and severity filters across 2 alert tabs.</li><li>Moved a live product&#x27;s release pipeline to the company&#x27;s new GitHub platform in one week, a migration I volunteered for, without changing backend routing; ran the retiring and the new image registries side by side, both verified, so releases can fall back to the old one.</li><li>Made build results trustworthy after the migration by removing three failures that looked like success, including build numbers that collided with old tags, so images were pushed while QA was silently skipped.</li><li>Carried the frontend on-call rotation (one-week shifts, 4–5 rotations, 2–3 real incidents), reproducing and diagnosing issues and handing backend problems to the owning team with reproduction steps and a first hypothesis.</li><li>Onboarded new team members with an onboarding guide and 20+ design pages, and host a weekly sync between UX design and frontend engineering.</li></ul></div>
+<div class='job'><div class='job-head'><h3>Wistron Corporation</h3><span class='meta'>Kaohsiung, Taiwan · Aug 2016 – Sep 2020</span></div><p class='role'>Senior Engineer</p><ul><li>Built Node.js (Express) RESTful APIs with Sequelize (ORM) and web front ends for smart-manufacturing, healthcare and education systems, including an Angular rewrite of a manufacturing system, React Native apps for on-site operations and a React medical order system with data visualization.</li><li>Built both frontend and backend of a live baby-monitoring camera system that streams video to cloud storage and tags events such as a baby rolling over on the recording.</li></ul></div><div class='job'><div class='job-head'><h3>ASE Technology Holding Co., Ltd.</h3><span class='meta'>Taoyuan, Taiwan · Jan 2015 – Jun 2016</span></div><p class='role'>IT Intern</p><ul><li>Developed and maintained internal MES applications with ASP.NET Web Forms and Oracle Database.</li></ul></div>
+</section>
+<section aria-labelledby="projects"><h2 id="projects">Projects</h2>
+<div class="job"><div class="job-head"><h3>AI Career Hub</h3><span class="meta">Personal, in development · Nov 2026 – Present</span></div>
+<ul><li>Job-search tracking app: PostgreSQL 18 schema with reversible migrations, row locks and ON CONFLICT for concurrent writes, and a Fastify REST API; 134 integration tests run against a real database in CI. Built with AI coding agents; I approve each design and review every pull request.</li></ul></div>
+</section>
+<section aria-labelledby="skills"><h2 id="skills">Skills</h2><dl class="skills"><dt>Full-Stack</dt><dd>TypeScript, JavaScript (ES6+), React, Redux Toolkit, RTK Query, Angular, Node.js, Express, RESTful API design, API and event contract design</dd><dt>Backend &amp; Data</dt><dd>SQL, PostgreSQL, Oracle Database, Sequelize (ORM), schema migrations</dd><dt>LLM &amp; Agentic AI</dt><dd>LLM-integrated applications, AG-UI Protocol, agent tool runtime and registry, fetch streaming, multi-session state, prompt context injection</dd><dt>Architecture</dt><dd>Micro-frontend platform, Module Federation, Web Components, Shadow DOM, event-driven UI, design documents</dd><dt>CI/CD &amp; Release</dt><dd>GitHub Actions, OIDC, Docker images, Helm charts, image registries, branch protection, staged and revertible rollouts</dd><dt>Testing &amp; Operations</dt><dd>Jest, React Testing Library, Playwright, MSW, on-call rotation, incident triage, runbooks</dd><dt>AI-Assisted Engineering</dt><dd>Claude Code, Cursor, AI PR review evidence in CI, repository AI context</dd></dl></section>
+<section aria-labelledby="education"><h2 id="education">Education</h2>
+<div class="job-head"><h3>Yuan Ze University</h3><span class="meta">2012 – 2016</span></div>
+<p class="role">Bachelor of Science in Computer Science and Engineering</p>
+</section>
+<footer>Last updated November 2026.</footer>
+</main>
+</body>
+</html>
